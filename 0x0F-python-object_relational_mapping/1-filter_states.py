@@ -15,6 +15,7 @@ if __name__ == '__main__':
                                user=db_user,
                                password=db_password,
                                db=db_name)
+
     cursor = database.cursor()
 
     cursor.execute('SELECT id, name FROM states\
