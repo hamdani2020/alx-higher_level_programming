@@ -18,8 +18,7 @@ if __name__ == '__main__':
 
     cursor = database.cursor()
 
-    cursor.execute('SELECT id, name FROM states\
-                   ORDER BY states.id ASC')
+    cursor.execute('SELECT id, name FROM states ORDER BY states.id ASC')
     
     for row in cursor.fetchall():
         if row[1][0] == 'N':
