@@ -1,21 +1,26 @@
 #!/usr/bin/python3
-"""It finds peak in unsorted list"""
+"""It finds peak in list of unsorted integers
+"""
+
 
 def find_peak(list_of_integers):
-    """unsorted list"""
+    """It fiinds peak in unsorted list
+    """
     li = list_of_integers
-    size = len(li)
+    s = len(li)
 
-    if size == 0:
+    if s == 0:
         return None
 
-    if size is 1:
+    if s is 1:
         return li[0]
 
-    return recurse(li, 0, size -1)
+    return recurse(li, 0, s - 1)
+
 
 def recurse(li, left, right):
-    """This is a recursive component"""
+    """A Recursive component
+    """
     m = int((left + right) / 2)
 
     if left > right:
@@ -25,7 +30,8 @@ def recurse(li, left, right):
        and (m == len(li) - 1 or li[m] > li[m + 1]):
         return li[m]
 
+    # recurse left
     elif (m > 0) and li[m - 1] > li[m]:
         return recurse(li, left, m - 1)
-    else:
+    else:  # recurse right
         return recurse(li, m + 1, right)
