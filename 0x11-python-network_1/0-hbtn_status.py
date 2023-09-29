@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This script fetches response from a url"""
+"""This script fetches response from a url
+"""
 
 import urllib.request
 
