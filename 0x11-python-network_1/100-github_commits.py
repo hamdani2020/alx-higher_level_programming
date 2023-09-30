@@ -16,4 +16,5 @@ u = requests.get(url)
 u = u.json()
 
 for commit in u:
-    print('{}: {}'.format(commit.get('sha'), commit.get('commit').get('author').get('name')))
+    print('{}: {}'.format(commit.get('sha'),
+                          commit.get('commit').get('author').get('name')))
