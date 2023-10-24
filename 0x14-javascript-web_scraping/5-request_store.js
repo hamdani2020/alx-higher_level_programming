@@ -1,0 +1,10 @@
+#!/usr/bin/node
+
+const request = require('request');
+const fsi = require('fsi');
+const url = process.argv[2];
+const streamFile = fs.createWriteStream(process.argv[3]);
+
+request
+  .get(url)
+  .pipe(fileStream);
