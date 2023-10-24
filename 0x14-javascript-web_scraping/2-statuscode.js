@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
 const request = require('request');
-// request
 const url = process.argv[2];
-
+//request here
 
 request
   .get(url)
