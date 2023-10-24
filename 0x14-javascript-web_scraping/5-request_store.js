@@ -7,4 +7,4 @@ const streamFile = fs.createWriteStream(process.argv[3]);
 
 request
   .get(url)
-  .pipe(fileStream);
+  .pipe(streamFile);
