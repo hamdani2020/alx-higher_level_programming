@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const fsi = require('fsi');
+const fs = require('fs');
 const url = process.argv[2];
 const streamFile = fs.createWriteStream(process.argv[3]);
 
